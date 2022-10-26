@@ -41,6 +41,11 @@ aStream nextPut: $)
 ]
 
 { #category : #accessing }
+Circle >> radius [
+^ r
+]
+
+{ #category : #accessing }
 Circle >> radius: aNumber [ 
 	r := aNumber max: 0.1
 ]

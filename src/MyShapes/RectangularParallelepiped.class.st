@@ -4,6 +4,32 @@ Class {
 	#category : #MyShapes
 }
 
+{ #category : #'as yet unclassified' }
+RectangularParallelepiped class >> baseClass: baseVal h: bNumber [ 
+^ self new base: baseVal; height: bNumber
+
+]
+
+{ #category : #accessing }
+RectangularParallelepiped >> base [
+	^ base
+]
+
+{ #category : #accessing }
+RectangularParallelepiped >> base: aRect [
+   base:= (aRect class = Rect) ifTrue: [base:= aRect] .
+]
+
+{ #category : #accessing }
+RectangularParallelepiped >> height [
+	^height
+]
+
+{ #category : #accessing }
+RectangularParallelepiped >> height: aNumber [ 
+	height:= aNumber max: 0.1
+]
+
 { #category : #initialization }
 RectangularParallelepiped >> initialize [ 
  base := Rect new.
